@@ -2,4 +2,4 @@
 
 Repo is for my presentation slides + text
 
-**Note**: Theme (University exclusive) is not included, so the latex build will fail if you do not change the theme. 
+**Note**: Theme (University exclusive) is not included, so the latex build will fail if you do not change the theme. Furthermore, the images for UHH logo are not included.

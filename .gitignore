@@ -1,0 +1,5 @@
+*.sty
+notes.txt
+lit/**
+img/**
+*.pdf

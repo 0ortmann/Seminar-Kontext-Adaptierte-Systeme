@@ -1,0 +1,58 @@
+\documentclass{beamer}
+%\documentclass[handout]{beamer}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usetheme{vsis}
+
+% Vor jedem neuen Teil (\part) eine Folie mit Titel anzeigen
+\AtBeginPart{\frame{\partpage}}
+
+% Vor jedem neuen Abschnitt (\section) eine Folie mit Gliederung für diesen Abschnitt zeigen
+\AtBeginSection{\frame{\frametitle{\insertsection}\tableofcontents[currentsection,hideothersubsections]}}
+
+% für Grafik-Beispiel:
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,fit,backgrounds,shapes}
+
+% Daten dieser Pr?entation
+\title{Mobile kontextadaptive Dienste und Systeme}
+\subtitle{Data Mining \& Analyse von Sensordaten }
+\author{Felix Ortmann}
+\date{\today}
+\institute[Uni-HH]{Universität Hamburg \\ Fakultät für Mathematik, Informatik und Naturwissenschaften \\ Department Informatik \\ Zentrum für Verteilte Informations- und Kommunikationssysteme \\ Arbeitsbereich Verteilte Systeme und Informationssysteme}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Gliederung}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+
+\include{sections/Motivation}
+\include{sections/Sensordaten}
+\include{sections/Datamining}
+\include{sections/Anwendungen}
+\include{sections/Zusammenfassung}
+
+
+\section{Literatur}
+
+\nocite{*}
+
+\begin{frame}[allowframebreaks]{\insertsubsection}
+	\begingroup
+	\small
+	\beamertemplatebookbibitems
+	\bibliographystyle{plain}
+	\bibliography{bib}
+	\endgroup
+\end{frame}
+
+\end{document}
