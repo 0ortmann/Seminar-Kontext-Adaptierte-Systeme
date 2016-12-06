@@ -3,3 +3,5 @@ notes.txt
 lit/**
 img/**
 *.pdf
+*.fls
+*.fdb_latexmk
