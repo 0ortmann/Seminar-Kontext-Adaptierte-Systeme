@@ -7,13 +7,20 @@
 \usepackage{lmodern}
 \usepackage{listings}
 
+\usepackage{etoolbox}
+
+
 \usetheme{vsis}
 
 % Vor jedem neuen Teil (\part) eine Folie mit Titel anzeigen
 \AtBeginPart{\frame{\partpage}}
 
 % Vor jedem neuen Abschnitt (\section) eine Folie mit Gliederung für diesen Abschnitt zeigen
-\AtBeginSection{\frame{\frametitle{\insertsection}\tableofcontents[currentsection,hideothersubsections]}}
+\AtBeginSection[]{
+    \ifnumcomp{\value{section}}{=}{1}{}{
+        \frame{\frametitle{\insertsection}\tableofcontents[currentsection,hideothersubsections]}
+    }
+}
 
 % für Grafik-Beispiel:
 \usepackage{tikz}
@@ -39,8 +46,9 @@
 \include{sections/Motivation}
 \include{sections/Context}
 \include{sections/Datamining}
-\include{sections/Anwendungen}
+\include{sections/RealWorld}
 \include{sections/Zusammenfassung}
+\include{sections/Fragen}
 
 
 \section{Literatur}
@@ -48,12 +56,12 @@
 \nocite{*}
 
 \begin{frame}[allowframebreaks]{\insertsubsection}
-	\begingroup
-	\small
-	\beamertemplatebookbibitems
-	\bibliographystyle{apalike}
-	\bibliography{bib}
-	\endgroup
+    \begingroup
+    \small
+    \beamertemplatebookbibitems
+    \bibliographystyle{apalike}
+    \bibliography{bib}
+    \endgroup
 \end{frame}
 
 \end{document}
