@@ -6,6 +6,8 @@ Repo is for my presentation slides + text
 
 #### Graphics:
 
+All the following images are not included in the github-upstream, but you can find the sources to the images below:
+
 `/img/CRISP-DM_Process_Diagram.png`
 
 [Source](https://commons.wikimedia.org/wiki/File%3ACRISP-DM_Process_Diagram.png)
@@ -23,4 +25,8 @@ Source is the article "From data mining to knowledge discovery in databases" of 
 
 `img/kmeans.png`
 
-Not included in upstream, so the pdf build will break here. Please find the graphic [here](https://i.ytimg.com/vi/_aWzGGNrcic/hqdefault.jpg), the respective video [here](https://www.youtube.com/watch?v=_aWzGGNrcic) and the homepage of the creator [here](http://homepages.inf.ed.ac.uk/vlavrenk/)
+Please find the graphic [here](https://i.ytimg.com/vi/_aWzGGNrcic/hqdefault.jpg), the respective video [here](https://www.youtube.com/watch?v=_aWzGGNrcic) and the homepage of the creator [here](http://homepages.inf.ed.ac.uk/vlavrenk/)
+
+`img/SVM_5.png` `img/SVM_21.png`
+
+There is a very simple and well-explaining article on support vector machines to be found [here](https://www.analyticsvidhya.com/blog/2015/10/understaing-support-vector-machine-example-code/). The graphics come from that artivle.

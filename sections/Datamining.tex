@@ -135,11 +135,46 @@
 \end{frame}
 
 
+\subsection{Support Vector Machine -- SVM}
+
+\begin{frame}
+    \frametitle{\insertsubsection \ -- \cite{datamining2011}}
+    Supervised $\rightarrow$ Klassifikation durch bereits bekannte Klassifikation anderer Punkte 
+    \vspace{1em}
+    \begin{itemize}
+        \setlength\itemsep{0.8em}
+        \item Betrachtet eine Menge „kritischer Punkte”
+        \item Punkte so weit wie möglich von einander entfernt unterteilen
+        \item „Hyperplane“: Lineare Unterscheidungsfunktion, eine Dimension geringer als Features in Punktewolke
+        \item $\rightarrow$ Binärer (linearer) Klassifikator
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\insertsubsection}
+     B klassifiziert „am besten”:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.6\textwidth]{img/SVM_21}
+        \caption{Online Material von \cite{ray2015}, \url{https://www.analyticsvidhya.com/blog/2015/10/understaing-support-vector-machine-example-code/}\label{fig:svm}}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\insertsubsection}
+    Und nun?
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.6\textwidth]{img/SVM_5}
+        \caption{Online Material von \cite{ray2015}, \url{https://www.analyticsvidhya.com/blog/2015/10/understaing-support-vector-machine-example-code/}\label{fig:svm2}}
+    \end{figure}
+\end{frame}
+
 
 \subsection{K-Means Clustering}
 
 \begin{frame}[fragile]
-    \frametitle{\insertsubsection }
+    \frametitle{\insertsubsection}
     Unsupervised $\rightarrow$ Einzelne Punkte haben keine bekannte Klassifikation \cite{datamining2011}
     \vspace{1em}
     \begin{lstlisting}
@@ -155,7 +190,7 @@ def K-Means(K: int, toCluster: Set):
     \cite{lavrenko2013}
 \end{frame}
 
-\begin{frame}[fragile]
+\begin{frame}
     \frametitle{\insertsubsection}
 
     \begin{figure}[H]
@@ -164,8 +199,3 @@ def K-Means(K: int, toCluster: Set):
         \caption{Online Material von \cite{lavrenko2013}, \url{https://i.ytimg.com/vi/_aWzGGNrcic/hqdefault.jpg}\label{fig:kmeans}}
     \end{figure}
 \end{frame}
-
-\subsection{Canopy Clustering}
-
-
-\subsection{Entscheidungsbäume}
