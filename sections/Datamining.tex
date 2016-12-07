@@ -25,12 +25,147 @@
     \end{block}
 \end{frame}
 
-\subsection{Support Vector Machines}
+\subsection{Mining Pozesse}
+
+\begin{frame}
+    \frametitle{\insertsubsection \ -- KDD}
+    \begin{block}{Knowledge Discovery in Databases -- KDD \cite{kdd96}}
+        \vspace{0.5em}
+        \begin{itemize}
+            \setlength\itemsep{1em}
+            \item Selection
+            \item Pre-processing
+            \item Transformation
+            \item Data Mining
+            \item Interpretation/Evaluation
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\insertsubsection \ -- KDD}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{img/KDD-DM_Process_Diagram}
+        \caption{\cite{kdd96}}\label{fig:kdd}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\insertsubsection \ -- CRISP}
+    \begin{block}{Cross Industry Standard Process for Data Mining -- CRISP \cite{crisp2000}}
+        \vspace{0.5em}
+        \begin{itemize}
+            \setlength\itemsep{1em}
+            \item Business Understanding
+            \item Data Understanding
+            \item Data Preparation
+            \item Modelling
+            \item Evaluation
+            \item Deployment
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\insertsubsection \ -- CRISP}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=2.2]{img/CRISP-DM_Process_Diagram}
+        \caption{\url{https://commons.wikimedia.org/wiki/File\%3ACRISP-DM\_Process\_Diagram.png}\label{fig:crisp}}
+    \end{figure}
+\end{frame}
+
+\subsection{Data Preparation}
+
+\begin{frame}
+    \frametitle{\insertsubsection}
+    „Sehr aufwändiger, wenn nicht aufwändigster Teil-Prozess!” \cite{pocket2014}
+    \vspace{1em}
+    \begin{itemize}
+        \setlength\itemsep{1em}
+        \item Datenerhebung: Sammeln aus heterogenen Quellen
+        \item Unifikation: Vereinheitlichen, soweit möglich
+            \begin{itemize}
+                \setlength\itemsep{0.5em}
+                \item Formate bzw Attribute (ISO Standards, JSON, XML...)
+                \item „Sparse Data” kann entstehen
+            \end{itemize}
+        \item „Outlier” Entfernen (nicht immer sinnvoll)
+        \item „Preaggregation” -- zB. Mittelwerte verwenden (nicht immer sinnvoll)
+    \end{itemize}
+\end{frame}
+
+\subsection{Learning Strategien}
+
+\begin{frame}
+    \frametitle{\insertsubsection \ \cite{datamining2011}}
+    \begin{block}{„Supervised Learning“}
+        \vspace{0.5em}
+        \begin{itemize}
+            \setlength\itemsep{0.5em}
+            \item Klassifizierung \emph{vom Menschen} vorgegeben
+            \item Input und (gewünschter) Output bekannt
+            \item Algorithmen \emph{verwenden} Klassifikator
+            \item Trainingsdaten \& Testdaten
+        \end{itemize}
+    \end{block}
+    \vspace{0.8em}
+    \begin{block}{„Unsupervised Learning“}
+        \vspace{0.5em}
+        \begin{itemize}
+            \setlength\itemsep{0.5em}
+            \item Klassifizierung \emph{vom Algorithmus} bestimmt
+            \item Nur Input bekannt
+            \item Output des Algorithmus muss Mensch zufrieden stellen
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\subsection{K-Nearest-Neighbor (KNN)}
+
+\begin{frame}
+    \frametitle{\insertsubsection}
+    Supervised $\rightarrow$ Klassifikation durch bereits bekannte Klassifikation der Nachbarn \cite{datamining2011}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.5\textwidth]{img/knn}
+        \caption{K-Nearest-Neighbor, vereinfachte Darstellung. Klassifikation der Roten Box: Wähle $K=5 \rightarrow$ \textit{blau}. Wähle $K=10 \rightarrow$ \textit{grün}\label{fig:knn}}
+    \end{figure}
+\end{frame}
+
+
 
 \subsection{K-Means Clustering}
 
+\begin{frame}[fragile]
+    \frametitle{\insertsubsection }
+    Unsupervised $\rightarrow$ Einzelne Punkte haben keine bekannte Klassifikation \cite{datamining2011}
+    \vspace{1em}
+    \begin{lstlisting}
+def K-Means(K: int, toCluster: Set):
+    Place K centroids randomly
+    repeat until convergence:
+        for each Point in 'toCluster':
+            find closest centroid
+            add point to cluster
+        for each cluster in 1..K:
+            new centroid: mid of all points
+    \end{lstlisting}
+    \cite{lavrenko2013}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{\insertsubsection}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.6\textwidth]{img/kmeans}
+        \caption{Online Material von \cite{lavrenko2013}, \url{https://i.ytimg.com/vi/_aWzGGNrcic/hqdefault.jpg}\label{fig:kmeans}}
+    \end{figure}
+\end{frame}
+
 \subsection{Canopy Clustering}
 
-\subsection{K-Nearest-Neighbor (KNN)}
 
 \subsection{Entscheidungsbäume}
