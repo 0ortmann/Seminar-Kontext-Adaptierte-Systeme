@@ -1,7 +1,7 @@
 *.sty
-notes.txt
-lit/**
-img/**
+**/notes.txt
+**/lit/**
+**/img/**
 *.acn
 *.acr
 *.alg
