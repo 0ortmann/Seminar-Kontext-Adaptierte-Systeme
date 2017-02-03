@@ -1,2 +1,18 @@
 \chapter{Datamining}
 \label{chap:datamining}
+
+Dieses Kapitel unterscheidet verschiedene Möglichkeiten von Datamining im mobilen Bereich. Die zwei bekanntesten Standardverfahren zum allgemeinen Vorgehen bei Datamining -- sog. \textit{Mininprozesse} -- werden kurz vorgestellt. Anschließend werden zwei \textit{Learning Strategien} diskutiert und verschiedene Algorithmen, die diese Strategien umsetzen werden präsentiert.
+
+\section{Mining Strategien}
+
+Es gilt die in Kapitel \ref{chap:context} diskutierten Herausforderungen beim Datamining im mobilen Bereich effizient zu bewältigen. Insbesondere Rechenleistung und Akkulaufzeit sind kritische Faktoren, denn laut \cite{pocket2014} sind viele Rechenprozesse beim Datamining sehr resourcenhungrig. Darum ist es sinnvoll zu unterscheiden, wo (im physikalischen Sinne) die Miningprozesse stattfinden -- auf dem Gerät oder extern (zB. Cloud). In \cite{pocket2014} wird entferntes Mining als „mobile Interface“ Mining bezeichnet. Dabei wird das mobile Endgerät als Datenlieferant -- „Interface zu den Daten“ -- betrachtet. Alle erhobenen Daten werden an den entfernten Dienst gesendet und dort verarbeitet. Im Gegensatz dazu steht das „on-board Mining“. Dabei finden Dataminingprozesse direkt auf dem mobilen Gerät statt. Dies wurde erst mit zunehmender Leistung der Geräte in den letzten Jahren möglich \cite{pocket2014}.
+
+\section{Mining Prozesse}
+
+Der wohl bekannteste Miningprozess ist der 1996 vorgestellte „Knowledge Discovery in Databases“\cite{kdd96}, abgekürzt \textit{KDD}-Prozess. Dabei werden fünf Schritte durchlaufen, mit dem Ziel aus einer großen Menge Daten Wissen zu generieren. Wichtig ist zu beachten, dass die tatsächliche Ausfürhung von Datamining-Algorithmen nur einer der fünf Schritte ist. Das Verfahren beginnt mit einer Datenselektion, um die Menge der zu minenden Daten (ggf. drastisch) zu reduzieren. Anschließend folgt eine Vorverarbeitung und Datentransformation, um die ggf. heterogenen Daten mit einem gemeinsamen Verfahren bearbeitbar zu machen. Erst hiernach können Mining-Algorithmen angewandt werden. Die abschließende Interpretation der Miningergebnisse führt letztendlich zu neuem Wissen. Nach jedem Schritt ist es möglich, Zwischenergebnisse wieder in einen vorherigen Schritt zurückzuführen.
+
+Aufgund der Inflexibilität von KDD wurde 2000 ein anderer Standard entwickelt, dessen Ziel es ist, einen branchenübergreifenden Ansatz für Datamining zu formalisieren. Bei \textit{CRISP} -- „Cross Industrie Standard Process for Datamining“\cite{crisp2000} handelt es sich um einen zyklischen Prozess zu dessen Beginn eine Analyse der Geschäftsanforderungen steht. Bereits hier wird der branchenübergreifende, weniger technische Ansatz sichtbar. Nach dem „Business Understanding“ folgen das „Data Understanding“, bei dem jene geschäftlich relevanten Daten analysiert werden und die „Data Preparation“. Im Gegensatz zum KDD werden hier die Schritte der Datenreduktion und Formatvereinheitlichung nicht extra erwähnt. Es folgt das „Modeling“ und die „Evaluation“, bei denen eine Problemstellung modelliert und anschließend evaluiert wird -- anhand von Datamining-Prozessen. Je nach Ausgang der Evaluation werden die gewonnenen Erkenntnisse angewandt („Deployment“) oder es findet ein Rückfluss zu dem „Understanding“ Phasen statt.
+
+Nach \cite{pocket2014} ist der Schritt der Datenvorbereitung einer aufwändigsten Prozesse beim Datamining.
+
+\section{Learning und Algorithmen}
