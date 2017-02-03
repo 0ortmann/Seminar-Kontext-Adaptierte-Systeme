@@ -1,0 +1,143 @@
+% ---------------------------------------------------------------------
+% Das Dokument kompiliert mit pdflatex und ist auf Basis 
+% von Koma-Script entstanden. 
+%
+% Autor des Templates (für Anmerkungen): 
+% Michael von Riegen, riegen@informatik.uni-hamburg.de
+%
+% Einzelne Code-Teile für das Titelblatt sind aus dem Template 
+% von Benjamin Kirchheim entnommen.
+% ---------------------------------------------------------------------
+\documentclass[11pt,bibtotoc,DIV15,BCOR20mm,tablecaptionabove]{scrbook}
+
+% packages
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[pdftex]{color} 
+\usepackage{setspace}
+\usepackage[pdftex]{graphicx}  
+\usepackage[final]{listings}  
+\usepackage{ae,aecompl}  
+\usepackage[normalem]{ulem}
+\usepackage{amsfonts} % ok-zeichen usw
+\usepackage{scrpage2}
+
+% schrift auf palatino umstellen
+\usepackage{palatino}
+\setkomafont{sectioning}{\normalcolor\bfseries}
+
+% pdfbookmarks 
+% (generiert für PDF auch gleich 
+% ein Inhaltsverzeichnis und Links)
+\usepackage[
+    pdfstartview=FitH,   
+    pdffitwindow=true,
+    colorlinks,
+    linkcolor=black,
+    anchorcolor=black,
+    citecolor=black,
+    urlcolor=black
+]{hyperref}
+
+% Zeilenabstand
+\setstretch{1.24}   
+
+% Pagestyle definieren (nach Martins Template)
+\defpagestyle{diplHeadings}
+{
+    % obere Linie
+    (0pt,0pt)
+    % linke Seite
+    {\upshape \rlap{\pagemark} \hfill \headmark} 
+    % rechte Seite
+    {\upshape \headmark \hfill \llap{\pagemark}} 
+    % falls Layout "one page", aber das haben wir ja nicht
+    {}
+    % untere Line
+    (\textwidth,1pt)
+}
+{
+    % obere Linie
+    (\textwidth,1pt)
+    % linke Seite
+    {}
+    % rechte Seite
+    {}
+    % falls Layout "one page", aber das haben wir ja nicht
+    {}
+    % untere Linie
+    (0pt,0pt)
+}  
+% Pagestyle auch für Chapter-Anfang einrichten
+\renewcommand*{\chapterpagestyle}{diplHeadings}
+\renewcommand*{\chapterheadstartvskip}{\vspace*{-\topskip}}
+\automark[section]{chapter}
+
+% Ränder  
+\setlength{\textwidth}{15cm}        % Textbreite
+\setlength{\textheight}{24cm}       % Texthöhe
+\setlength{\topmargin}{-12mm}       % oberer Rand
+
+% PDF Dokumentinformationen
+\hypersetup {
+    pdftitle     = {Titel},
+    pdfsubject   = {Universität Hamburg / FB18 / VSIS / Art des Artikels},
+    pdfauthor    = {Vorname Name},
+    pdfkeywords  = {Keywords},
+    plainpages   = false, pdfpagelabels
+}
+
+% Listingsformatierung (Quelltexte)
+\definecolor{lightgrey}{rgb}{0.90,0.90,0.90}
+\lstloadlanguages{XML}
+\lstset {
+    tabsize=2,
+    escapeinside={(*@}{@*)},
+    captionpos=t,
+    framerule=0pt,
+    backgroundcolor=\color{lightgrey},
+    basicstyle=\small\ttfamily,
+    keywordstyle=\small\bfseries,
+    numbers=left,
+    fontadjust
+}
+
+\begin{document}
+
+% TITELSEITE
+\input{titlepage}
+
+% pagestyle auf seminararbeit umschalten
+\pagestyle{diplHeadings}
+
+% VERZEICHNISSE (Inhaltsverzeichnis, Abkürzungen)
+% --> Seitennummerierung römisch
+\pagenumbering{Roman}
+\setcounter{page}{1}
+% Inhaltsverzeichnis
+\tableofcontents
+\cleardoublepage
+
+% KAPITEL
+% --> Seitennummerierung wieder arabisch
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{sections/Motivation}
+\input{sections/Context}
+\input{sections/Datamining}
+\input{sections/RealWorld}
+\input{sections/Zusammenfassung}
+
+\cleardoublepage
+
+% VERZEICHNISSE (Abbildungen, Tabellen)
+% Literatur 
+%\bibliographystyle{alphadin}
+\bibliographystyle{apalike}
+\bibliography{../bib}
+\cleardoublepage
+
+\end{document}

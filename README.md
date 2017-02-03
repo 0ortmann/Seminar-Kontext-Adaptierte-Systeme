@@ -2,7 +2,9 @@
 
 Repo is for my presentation slides + text
 
-**Note**: Theme (University exclusive) is not included, so the latex build will fail if you do not change the theme. Furthermore, the images for UHH logo are not included.
+**Note**: Theme (University exclusive) is not included, so the latex build will fail if you do not change the theme. Furthermore, the images for UHH and VSIS logo are not included.
+
+The paper is (mostly) built with [this](https://vsis-www.informatik.uni-hamburg.de/vsis/teaching/templates) from UHH VSIS template for course papers. 
 
 #### Graphics:
 
