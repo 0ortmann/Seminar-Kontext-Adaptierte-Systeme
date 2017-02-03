@@ -10,7 +10,7 @@ The paper is (mostly) built with [this](https://vsis-www.informatik.uni-hamburg.
 
 All the following images are not included in the github-upstream, but you can find the sources to the images below:
 
-`/img/CRISP-DM_Process_Diagram.png`
+`slides/img/CRISP-DM_Process_Diagram.png`
 
 [Source](https://commons.wikimedia.org/wiki/File%3ACRISP-DM_Process_Diagram.png)
 
@@ -21,14 +21,14 @@ By Kenneth Jensen (Own work) [CC BY-SA 3.0](http://creativecommons.org/licenses/
 </a>
 
 
-`/img/KDD-DM_Process_Diagram.png`
+`slides/img/KDD-DM_Process_Diagram.png`
 
 Source is the article "From data mining to knowledge discovery in databases" of 1996 by Fayyad, Usama and Piatetsky-Shapiro, Gregory and Smyth, Padhraic.
 
-`img/kmeans.png`
+`slides/img/kmeans.png`
 
 Please find the graphic [here](https://i.ytimg.com/vi/_aWzGGNrcic/hqdefault.jpg), the respective video [here](https://www.youtube.com/watch?v=_aWzGGNrcic) and the homepage of the creator [here](http://homepages.inf.ed.ac.uk/vlavrenk/)
 
-`img/SVM_5.png` `img/SVM_21.png`
+`slides/img/SVM_5.png` `slides/img/SVM_21.png`
 
-There is a very simple and well-explaining article on support vector machines to be found [here](https://www.analyticsvidhya.com/blog/2015/10/understaing-support-vector-machine-example-code/). The graphics come from that artivle.
+There is a very simple and well-explaining article on support vector machines to be found [here](https://www.analyticsvidhya.com/blog/2015/10/understaing-support-vector-machine-example-code/). The graphics come from that article.
