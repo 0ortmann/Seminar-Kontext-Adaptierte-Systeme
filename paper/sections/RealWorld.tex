@@ -1,2 +1,14 @@
 \chapter{Real World Mobile Sensor Data Mining}
 \label{chap:realworld}
+
+Durch die Erhebung von (Sensor-) Daten und angewandtem Kontextwissen entsteht die Möglichkeit, alltägliches menschliches Verhalten zu messen und zu erforschen. Das bildet eine wesentliche Grundlage für Forschungsprojekte und wirtschaftliches Interesse \cite{lockhart2011}. Das Forschungsprojekt „Wireless Sensor Data Mining Laboraty -- WISDM Lab“ beschäftigt sich zum Beispiel ausschließlich damit, Sensordaten mobiler Geräte mit Datamining Verfahren zu untersuchen und Wissen daraus zu generieren\footnote{Fordham University, Bronx, NY \url{http://www.cis.fordham.edu/wisdm/}}. Im Folgenden wird eine aktuelle App in Bezug auf ihren Einsatz von Datamining untersucht.
+
+\section{iOS Health}
+
+iOS Health ist eine moderne HealthCare App, die dem Nutzer helfen soll seine eigene Gesundheit zu kontrollieren und zu verbessern. Auf der Startseite der Website finden sich in der App-Beschreibung unteranderem folgende Sätze: „It consolidates health data from iPhone, Apple Watch, and third-party apps you already use“ ... „And it recommends other helpful apps ...“.\cite{iosHealth}.
+
+Die App erhebt diverse (Sensor-) Daten auf einer Vielzahl von Geräten, etwa einer Armbanduhr oder dem Smartphone. Laut dem aktuellen iOS Security Whitepaper lassen sich diese Daten unterscheiden in „Health Data“ und „Management Data“\cite{iosSecurity}. Zu Ersterem gehören unter anderem \emph{Größe, Gewicht, gegangene Distanz} und \emph{Blutdruck}, zu Letzterem \emph{Zugriffsberechtigungen, Angeschlossene Geräte, „Scheduling Daten“ wenn Apps gestartet werden} uvm.\cite{iosSecurity}. Aus der HealthKit API Reference \cite{hkApi} geht hervor, dass diese Daten „in der Cloud“ gespeichert werden und die Geräte lediglich Daten übertragen. Nach \cite{pocket2014} handelt es sich daher um eine Art des „mobile Interface Mining“. Sogar andere Apps können diese in der Cloud befindlichen Daten zugreifen, wenn die Berechtigung vom Nutzer gegeben wird.
+
+Aus diesen Offenlegungen von Apple zur Funktionsweise von HealthKit lässt sich ableiten, welch umfangreiche „Context Awareness“ bei dieser App vorliegt. Die erhobenen Kontextdaten bieten tiefe Einblicke in biologische sowie persönliche Nutzereigenschaften, das Gerät der Anwendungsausführung, anderer Anwendungen auf dem Gerät, geografischer Lage und Bewegungsgeschwindigkeit des Geräts und noch viele mehr.\\
+
+Am Beispiel von iOS Health wird deutlich, in welchem Umfang Datamining im mobilen Bereich bereits heute genutzt wird. Dabei werden sowohl neue Nutzerfunktionen ermöglicht als auch wirtschaftliche Interessen befriedigt.
