@@ -48,3 +48,39 @@ Bei dem \textit{K-Nearest-Neighbor} kurz \textit{KNN} handelt es sich ebenfalls 
 
 \subsection{Support Vector Machine}
 
+Eine Support Vector Machine -- kurz \textit{SVM} -- betrachtet eine Menge kritischer Datenpunkte im Datenraum und versucht diese Punkte soweit entfernt voneinander wie möglich zu unterteilen \cite{datamining2011}. Die daraus entstehende Unterscheidungsfunktion wird als \textit{Hyperplane} bezeichnet. Sie ist in ihrer Dimensionalität um eins geringer als die zu unterteilende Punktewolke, im einfachsten Fall also linear. Die Klassifikation eines neuen Punktes mithilfe einer SVM geschieht, indem von der SVM entschieden wird, an welcher Stelle des unterteilten Punkteraums der neue Punkt sich befindet \cite{datamining2011}. Abbildung \ref{fig:svm} zeigt ein einfaches Beispiel, bei dem die drei Hyperplanes \textit{A, B} und \textit{C} den Punkteraum unterteilen. \textit{B} wird als bester Klassifikator betrachtet, da \textit{B} die existierenden Punkte soweit wie möglich von einander entfernt unterteilt.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{../slides/img/SVM_21}
+    \caption{Online Material von \cite{ray2015}, \url{https://www.analyticsvidhya.com/blog/2015/10/understaing-support-vector-machine-example-code/}\label{fig:svm}}
+\end{figure}
+
+Auch die SVM zählt zu den \textit{supervised} Verfahren, denn die Klassifikation begründet sich auf der bereits bekannten Klassifikation der existierenden Punkte.
+
+\subsection{K-Means-Clustering}
+
+K-Means ist ein bekanntes Clustering Verfahren. Es gilt als \textit{unsupervised}, denn der Algorithmus benötigt keine bereits bekannten Attribute zur Klassifikation. Der K-Means Algorithmus unterteilt den Punkteraum derart, dass $k$ Cluster gebildet werden. Das Attribut der Klassifikation ist die Distanz der einzelnen Punkte im Raum zu einander \cite{datamining2011}. Listing \ref{lst:kmeans} zeigt exemplarischen Pseudocode, um den Ablauf des Algorithmus zu veranschaulichen.
+
+\begin{center}
+\begin{lstlisting}[caption={K-Means Algorithmus \cite{lavrenko2013}},label=lst:kmeans,language=JAVA,label={lst:kmeans}]
+def K-Means(K: int, toCluster: Set):
+    Place K centroids randomly
+    repeat until convergence:
+        for each Point in 'toCluster':
+            find closest centroid
+            add point to cluster
+        for each cluster in 1..K:
+            new centroid: mid of all points
+\end{lstlisting}
+\end{center}
+
+Die einzelnen Schritte des Algorithmus werden in der folgenden Grafik \ref{fig:kmeans} für $k = 2$ illustiert.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{../slides/img/kmeans}
+    \caption{Online Material von \cite{lavrenko2013}, \url{https://i.ytimg.com/vi/_aWzGGNrcic/hqdefault.jpg}\label{fig:kmeans}}
+\end{figure}
+
+Die Cluster Mittelpunkte, die initial zufällig vom Algorithmus bestimmt werden, sind als Dreiecke dargestellt. Die gestrichelte rote Linie zeigt die mittlere Distanz zwischen den Zentroiden und veranschaulicht, welche Punkte welchem Zentroiden zugewiesen werden. Nach jeder Iteration werden die Zentroide verschoben, sodass sie wieder im Mittelpunkte des Clusters liegen, bis schließlich der Algorithmus terminiert und die Zentroide sich nicht mehr ändern. Es folgt die Klassifikation der Punktemenge anhand der gebildeten $k$-Cluster. In der Grafik ist dies unten links zu sehen.
