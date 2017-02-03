@@ -16,3 +16,35 @@ Aufgund der Inflexibilität von KDD wurde 2000 ein anderer Standard entwickelt, 
 Nach \cite{pocket2014} ist der Schritt der Datenvorbereitung einer aufwändigsten Prozesse beim Datamining.
 
 \section{Learning und Algorithmen}
+
+Nach \cite{datamining2011} werden „supervised“ und „unsupervised“ Learning unterschieden. Beide beschreiben unterschiedliche Charakteristika für Datamining-Algorithmen. Beim \textit{supervised Learning} werden Datenpunkte durch den Menschen klassifiziert. Sowohl die Eingabedaten als auch die gewünschte Ausgabe des Algorithmus sind vorab bekannt. \textit{Supervised} Algorithmen verwenden den Klassifikator, der durch den Menschen spezifiziert wurde. Datenpunkte werden häufig in Trainingsdaten und Testdaten unterteilt, mit denen der Algorithmus zunächst angepasst und anschließend verifiziert wird.
+
+Beim \textit{unsupervised} Learning hingegen wird der Klassifikator der Datenpunkte durch den Algorithmus bestimmt und ist nicht vorher durch den Menschen festgelegt. Außerdem sind nur die Eingabedaten bekannt, die Ausgabe nicht. Diese muss vielmehr zufriedenstellend für den Benutzer des Algorithmus sein, kann jedoch nicht festgelegt werden (siehe \cite{datamining2011}).
+
+\subsection {Lineare Regression}
+
+Ein bekannter Algorithmus, der \textit{supervised} ist, ist die \textit{lineare Regression}. Bei dieser werden alle Attribute einzelner Datenpunkte betrachtet. Der Algorithmus lernt, jedes einzelne Attribut zu wichten \cite{datamining2011}. Es wird eine Formel aufgestellt für einen Datenpunkt $x$, der Form
+\[
+	f(x) = w_0 + a_1w_1 + a_2w_2 + ... + a_kw_k
+\]
+\[
+	a_k : Attribut\ k\ eines\ Datenpunktes
+\]
+\[
+	w_k : Wichtung\ des\ Attributes\ k
+\]
+
+Mit der Funktion $f$ ist nun die Klassifikation von neuen Datenpunkten möglich. Der Algorithmus gilt als \textit{supervised}, weil die Klassifikation durch eine Formel erfolgt, die eben jene Attribute betrachtet die vorab bekannt sind.
+
+\subsection{K-Nearest-Neighbor}
+
+Bei dem \textit{K-Nearest-Neighbor} kurz \textit{KNN} handelt es sich ebenfalls um einen \textit{supervised} Algorithmus. KNN klassifiziert neue Datenpunkte dadurch, dass die $k$ nächsten Nachbarn des Punktes betrachtet werden, bei denen die Klassifikation bereits bekannt ist. Die Klassifikation erfolgt, indem dem neuen Punkt jene Klasse zugewiesen wird, die die meisten der $k$ nächsten Nachbarn haben \cite{datamining2011}. Abbildung \ref{fig:knn} zeigt die stark vereinfachte Klassifikation für das Attribut „Farbe“ der „roten Box“ mit Hilfe von KNN. Je nach Wahl des $k$ wird die rote Box entweder als \textit{blau} oder \textit{grün} klassifiziert.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\textwidth]{../slides/img/knn}
+    \caption{K-Nearest-Neighbor, vereinfachte Darstellung. Klassifikation der Roten Box: Wähle $K=5 \rightarrow$ \textit{blau}. Wähle $K=10 \rightarrow$ \textit{grün}\label{fig:knn}}
+\end{figure}
+
+\subsection{Support Vector Machine}
+
